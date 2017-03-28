@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var cp = require("child_process");
 var fs = require("fs-extra");
 var path = require("path");
@@ -20,7 +21,7 @@ function buildEngine(callback) {
 }
 exports.buildEngine = buildEngine;
 function executeCommand(command, args, callback) {
-    var child_process = cp.spawn(command, args);
+    var child_process = cp.exec(command, args);
     child_process.stdout.addListener("data", function (data) {
         console.log(data.toString());
     });

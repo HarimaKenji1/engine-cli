@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var StaticServer = require("static-server");
 function run() {
     var server = new StaticServer({
